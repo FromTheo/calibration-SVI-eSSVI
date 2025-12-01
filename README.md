@@ -1,6 +1,8 @@
 ### SVI
 In [1], Jim Gatheral proposes the following parametric form to model the fixed-maturity smile:
+
 $$v(k, T) = a + b\left(\rho(k-m) + \sqrt{(x-m^2) + \sigma^2}\right),$$
+
 where $v(k, T)$ is the implied variance at fixed time-to-maturity $T$, $x = \ln(K/F_T)$ the log-moneyness forward and $(a, b, m,\rho, \sigma)$ are the model parameters. Despite the simplicity of this model, its calibration remains intricate. Here we propose an implementation of the so-called Quasi-Explicit method proposed in [2] based on dimension reduction, which stabilizes and **significantly** improves calibration. 
 
 We also aim to ensure that each individual slice is free of butterfly arbitrage.
